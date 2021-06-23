@@ -21,5 +21,4 @@ export interface Customer extends Document {
     }
   ];
   readonly creditCards: object;
-  readonly error: [];
 }
