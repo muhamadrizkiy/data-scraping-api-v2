@@ -1,0 +1,54 @@
+{
+  "accounts": [
+    {
+      "accountNumber": "",
+      "accountType": "",
+      "currency": "",
+      "balance": "",
+      "transactions": [
+        {
+          "id": "",
+          "date": "",
+          "desc": "",
+          "cab": "",
+          "amount": "",
+          "flow": "",
+          "balance": ""
+        }
+      ]
+    }
+  ],
+  "creditCards": {
+    "details": [
+      {
+        "label": "",
+        "value": ""
+      }
+    ],
+    "billings": {
+      "previousBalance": "",
+      "payment": "",
+      "newBalance": "",
+      "outstandingBalance": ""
+    },
+    "cards": [
+      {
+        "type": "",
+        "cardNumber": "",
+        "name": "",
+        "newBalance": "",
+        "transactions": [
+          {
+            "id": "",
+            "transactionDate": "",
+            "postingDate": "",
+            "description": "",
+            "amount": "",
+            "flow": ""
+          }
+        ]
+      }
+    ]
+  },
+  "errors": []
+}
