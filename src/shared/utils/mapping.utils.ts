@@ -1,6 +1,6 @@
 const debitAmount = ["amountRight", "DB"];
 const creditAmount = ["amountLeft", "CR"];
-const desciption = ["desc"];
+const description = ["description"];
 const accountNumber = ["accountNumber"];
 
 export const merge = async (target, source) => {
@@ -18,7 +18,7 @@ export const merge = async (target, source) => {
       Object.assign(source[key], merge(target[key], source[key]));
 
     // set desc as a description value from source
-    if (desciption.includes(key)) source.desc = source[key];
+    if (description.includes(key)) source.desc = source[key];
 
     // remove any information in the Mandiri scraper that is not in the BCA scraper
     if (target[key] == undefined) delete source[key];
