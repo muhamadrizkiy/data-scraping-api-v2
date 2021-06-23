@@ -3,7 +3,7 @@ const creditAmount = ["amountLeft", "CR"];
 const description = ["description"];
 const accountNumber = ["accountNumber"];
 
-export const merge = async (target, source) => {
+export const merge = (target, source) => {
   String.prototype.replace = function(index, replacement) {
     return (
       this.substr(0, index) +
@@ -14,6 +14,7 @@ export const merge = async (target, source) => {
   // Iterate source properties
   for (const key of Object.keys(source)) {
     // check an `Object` set property to merge of `target` and `source` properties
+
     if (source[key] instanceof Object && key in target)
       Object.assign(source[key], merge(target[key], source[key]));
 

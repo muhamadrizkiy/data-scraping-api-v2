@@ -43,6 +43,15 @@ export class CustomersService {
     const mergeResult = await merge(data, scraperResult.result);
     const newCustomer: Customer = new this.CustomerModel(mergeResult);
     await newCustomer.save();
+
+    if (scraperResult.errors.length) {
+      const response = new ResponseDto(
+        HttpStatus.SERVICE_UNAVAILABLE,
+        scraperResult.errors[0]
+      );
+      throw new HttpException(response, response.statusCode);
+    }
+
     return new ResponseDto(
       HttpStatus.CREATED,
       "Bank customer account has been submitted successfully",
